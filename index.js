@@ -1,7 +1,7 @@
 const fruitNames = ["Grapes", "Melon", "Watermelon", "Tangerine", "Lemon", "Banana", "Pineapple", "Mango", "Red Apple"];
 const fruits = ["🍇", "🍈", "🍉", "🍊", "🍋", "🍌", "🍍", "🥭", "🍎"];
 
-
+// for the dropdown menu
     var values = ["Grapes 🍇", "Melon 🍈", "Watermelon 🍉", "Tangerine 🍊", "Lemon 🍋", "Banana 🍌", "Pineapple 🍍", "Mango 🥭", "Red Apple 🍎"];
  
     var select = document.createElement("select");
@@ -20,7 +20,56 @@ const fruits = ["🍇", "🍈", "🍉", "🍊", "🍋", "🍌", "🍍", "🥭", 
     label.innerHTML = "Choose your fruits: "
     label.htmlFor = "fruits";
 
+// for adding new fruit
+const list = document.querySelector('ul');
+const input = document.querySelector('input');
+const button = document.querySelector('button');
 
+button.onclick = function() {
+  let myItem = input.value;
+  input.value = '';
+
+  const listItem = document.createElement('li');
+  const listText = document.createElement('span');
+  const listBtn = document.createElement('button');
+
+  listItem.appendChild(listText);
+  listText.textContent = myItem;
+  listItem.appendChild(listBtn);
+  listBtn.textContent = 'Delete';
+  list.appendChild(listItem);
+
+  listBtn.onclick = function(e) {
+    list.removeChild(listItem);
+  }
+
+  input.focus();
+}
+
+// for sorting the fruits in ascending, descending and default 
+// create an if statement that includes (myfunction1 and myFunction2) ascending, descending and the default...
+function myFunction1() {
+  values.sort()
+  document.getElementById("values").innerHTML = values;
+}
+
+// for sorting the fruits in descending
+function myFunction2() {
+  // values.sort(function(a, b){
+
+    // return (b - a)
+  // });
+  document.getElementById("values").innerHTML = values;
+}
+
+// for descending
+function myFunction3() {
+  values.sort()
+  values.reverse()
+  document.getElementById("values").innerHTML = values;
+}
+
+// for search bar
     function myFunction() {
         // Declare variables
         var input, filter, ul, li, a, i, txtValue;
