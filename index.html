@@ -5,18 +5,16 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="simple-grid.css">
     <title>Fruits List</title>
 </head>
 <body>
     <br>
 
-    <div id="container"></div>
-    <div>
-    <label for="Choose your fruits: "></label>
-    </div>
-
-    <br>
-
+<div class="fruit-list">
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
     <!-- adding a new fruit -->
     <div>
       <label for="item">Enter a new fruit:</label>
@@ -24,19 +22,24 @@
       <button>Add new fruit</button>
     </div>
 
-    <br>
-<!-- sort in ascending and descending -->
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-6">
     <button onclick="myFunction1()">Sort in Ascending</button>
-    <button onclick="myFunction2()">Sort in Default</button>
+    </div>
+
+    <div class="col-6">
     <button onclick="myFunction3()">Sort in Descending</button>
-    <p id="values"></p>
+  </div>
+</div>
 
-    <br>
-
-    <!-- searching a fruit -->
+    <div class="row">
+      <div class="col-12">
     <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for fruits..">
 
-    <ul id="fruitsUL">
+    <ul id="values">
       <li><a href="#">Grapes 🍇</a></li>
       <li><a href="#">Melon 🍈</a></li>
       <li><a href="#">Watermelon 🍉</a></li>
@@ -47,6 +50,13 @@
       <li><a href="#">Mango 🥭</a></li>
       <li><a href="#">Red Apple 🍎</a></li>
     </ul> 
+
+  </div>
+</div>
+
+    </div>
+
+  </div>
 
 <script src="index.js"></script>
 </body>

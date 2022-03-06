@@ -1,114 +1,106 @@
-/* #myInput { */
-    /* background-image: url('/searchicon.png'); Add a search icon to input */
-    /* background-position: 10px 12px; Position the search icon */
-    /* background-repeat: no-repeat; Do not repeat the icon image */
-    /* width: 100%;  */
-    /* Full-width */
-    /* font-size: 16px; */
-     /* Increase font-size */
-    /* padding: 12px 20px 12px 40px; */
-     /* Add some padding */
-    /* border: 1px solid gray; */
-     /* Add a grey border */
-    /* margin-bottom: 12px;  */
-    /* Add some space below the input */
-  /* }
-  
-  #fruitsUL { */
-    /* Remove default list styling */
-    /* list-style-type: none;
-    padding: 0;
-    margin: 0;
-  } */
-  
-  /* #fruitsUL li a { */
-    /* border: 1px solid #ddd;  */
-    /* Add a border to all links */
-    /* margin-top: -1px;  */
-    /* Prevent double borders */
-    /* background-color: #f6f6f6; */
-     /*Grey background color */
-    /* padding: 12px;  */
-    /* Add some padding */
-    /* text-decoration: none;  */
-    /* Remove default text underline */
-    /* font-size: 18px;  */
-    /* Increase the font-size */
-    /* color: black;  */
-    /* Add a black text color */
-    /* display: block;  */
-    /* Make it into a block element to fill the whole list */
-  /* } */
-  
-  /* #fruitsUL li a:hover:not(.header) {
-    background-color: gray;  */
-    /* Add a hover effect to all links, except for headers */
-  /* } */
+body {
+  background-color: hotpink;
+  font-family: 'Times New Roman', Times, serif;
+  font-size: xx-large;
+  font-weight: 100;
+}
+.col-12 {
+  text-align: center;
+}
+.col-6 {
+  text-align: center;
+}
 
-/* label {
+#item {
+  width: 50%; /* Full-width */
+  font-size: 16px; /* Increase font-size */
+  padding: 12px 20px 12px 40px; /* Add some padding */
+  border: 3px solid gray; /* Add a grey border */
+  margin-bottom: 12px; /* Add some space below the input */
+}
+
+#myInput {
+    width: 100%; /* Full-width */
+    font-size: 16px; /* Increase font-size */
+    padding: 12px 20px 12px 40px; /* Add some padding */
+    border: 3px solid gray; /* Add a grey border */
+    margin-bottom: 12px; /* Add some space below the input */
+   }
+  
+#values { 
+  /* Remove default list styling */
+  list-style-type: none; 
+  padding: 0;
+  margin: 0;
+} 
+  
+#values li a {
+    border: 1px solid grey; /* Add a border to all links */
+    margin-top: -1px; /* Prevent double borders */
+    padding: 12px; /* Add some padding */
+    text-decoration: none; /* Remove default text underline */
+    font-size: 20px; /* Increase the font-size */
+    font-weight: bolder;
+    color: black; /* Add a black text color */
+    display: block; /* Make it into a block element to fill the whole list */
+  }
+  
+  #values li a:hover:not(.header) {
+    background-color: gray;  /* Add a hover effect to all links, except for headers */
+    text-decoration: none;
+  }
+
+label {
     all: unset;
-    font: 16px system-ui; */
-    /* color: #fff; */
-    /* height: 100%; 
+    font: 24px system-ui; 
+    height: 100%; 
     width: 100%;
     padding: 6px 10px;
-} */
-
-/* .container {
-    width: 300px;
-    height: 44px;
-    border-radius: 5px;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
 }
-
-select { */
-    /* all: unset; */
-    /* font: 16px system-ui; */
-    /* color: #fff; */
-    /* height: 100%;
-    width: 100%; */
-    /* padding: 6px 10px;
-}
-
-form {
-    background-color: #4654e1;
-    width: 300px;
-    height: 44px;
-    border-radius: 5px;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-  }
 
   input {
-    all: unset;
-    font: 16px system-ui; */
-    /* color: #fff; */
-    /* height: 100%;
+    font: 16px system-ui; 
+    height: 100%;
     width: 100%;
     padding: 6px 10px;
+    border-radius: 20px;
+    box-shadow: inset;
   }
 
-  ::placeholder { */
-    /* color: #fff; */
-    /* opacity: 0.7; 
+  ::placeholder { 
+    opacity: 0.7; 
+    background-color: white;
+    border-radius: 20px;
   }
 
-  button {
-    all: unset;
-    cursor: pointer;
-    width: 44px;
-    height: 44px;
+   button {
+    width: 150px;
+    height: 50px;
+    border-radius: 40px;
+    background-color: plum;
+    font-size: medium;
+    font-weight: 100px;
   }
   
-  svg { */
-    /* color: #fff; */
-    /* fill: currentColor;
+  svg {  
+    fill: currentColor;
     width: 24px;
     height: 24px;
     padding: 10px;
-  }  */
+  }  
 
-   
+  @media (min-width: 760px) {
+    body {
+     background-color: #FFF0F3;
+ }
+ }
+ 
+ @media (min-width: 960px) {
+     body {
+         background-color: hotpink;
+     }
+      
+     .fruits-list {
+         display: flex;
+         }
+ }
