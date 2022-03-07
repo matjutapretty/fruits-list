@@ -58,10 +58,35 @@ function sort() {
 }
 }
 
-function sort1(){
-  values.sort()
-  values.reverse()
-  document.getElementById("values").innerHTML = values;
+function reverse() {
+  // Declaring Variables
+  let values, i, run, li, stop;
+
+  // Taking content of list as input
+  values = document.getElementById("values");
+  run = true;
+  while (run) {
+      run = false;
+      li = values.getElementsByTagName("LI");
+console.log(li)
+li = Array.from(li).reverse()
+console.log(li)
+      // Loop traversing through all the list items
+      for (i = 0; i < (li.length - 1); i++) {
+          stop = false;
+          if (li[i].innerHTML.toLowerCase() > 
+              li[i + 1].innerHTML.toLowerCase()) {
+              stop = true;
+              break;
+          }
+      }
+      if (stop) {
+        li[i].parentNode.insertBefore(
+                li[i + 1], li[i]);
+
+        run = true;
+    }
+}
 }
 
 
