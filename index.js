@@ -1,4 +1,7 @@
 const values = ["Grapes 🍇", "Melon 🍈", "Watermelon 🍉", "Tangerine 🍊", "Lemon 🍋", "Banana 🍌", "Pineapple 🍍", "Mango 🥭", "Red Apple 🍎"];
+window.localStorage.setItem('values', JSON.stringify(values));
+JSON.parse(window.localStorage.getItem('values'));
+
 
 // for adding new fruit
 const list = document.querySelector('ul');
@@ -25,18 +28,42 @@ button.onclick = function() {
 
   input.focus();
 }
-// for sorting the fruits in ascending, descending and default 
-// create an if statement that includes (myfunction1 and myFunction2) ascending, descending and the default...
-function myFunction1() {
-  values.sort()
-  document.getElementById("values").innerHTML = values;
+
+function sort() {
+  // Declaring Variables
+  let values, i, run, li, stop;
+
+  // Taking content of list as input
+  values = document.getElementById("values");
+  run = true;
+  while (run) {
+      run = false;
+      li = values.getElementsByTagName("LI");
+
+      // Loop traversing through all the list items
+      for (i = 0; i < (li.length - 1); i++) {
+          stop = false;
+          if (li[i].innerHTML.toLowerCase() > 
+              li[i + 1].innerHTML.toLowerCase()) {
+              stop = true;
+              break;
+          }
+      }
+      if (stop) {
+        li[i].parentNode.insertBefore(
+                li[i + 1], li[i]);
+
+        run = true;
+    }
 }
-// for descending
-function myFunction3() {
+}
+
+function sort1(){
   values.sort()
   values.reverse()
   document.getElementById("values").innerHTML = values;
 }
+
 
 // for search bar
     function myFunction() {
@@ -59,15 +86,6 @@ function myFunction3() {
         }
       }
 
-      function clickCounter() {
-        if (localStorage.clickcount) {
-          localStorage.clickcount = Number(localStorage.clickcount)+1;
-        } else {
-          localStorage.clickcount = 1;
-        }
-        document.getElementById("values").innerHTML = localStorage.clickcount;
-      }
  
     document.getElementById("container");
-    // localStorage.setItem("values", "values");
-    // localStorage.getItem("values");
+
